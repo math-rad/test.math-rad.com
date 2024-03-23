@@ -5,7 +5,7 @@ const myApp = express();
 
 myApp.get("/", (request, response) => {
     const URL = request.url;
-    return `HI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n ${URL}`
+    response.send(`HI!!!!!!!!!!!!! ${request.url}`)
 })
 
 myApp.listen(serverConfig["application-port"]);
